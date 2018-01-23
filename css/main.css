@@ -58,10 +58,10 @@ input:focus{
 }
 
 #filtro{
-    margin-top:5%;
+    
 }
 #section-food{
-    border:1px solid white;
+
     margin-top:20%; 
 }
 
@@ -71,4 +71,15 @@ input:focus{
 
 .panel-default{
     height: 20%;
+}
+
+.modal-content{
+    text-align: center;
+    margin-top:50%;
+    padding-bottom: 10%;
+    background: #ffc234;
+}
+
+#color-modal{
+    background: #ffc234;
 }
