@@ -83,3 +83,9 @@ input:focus{
 #color-modal{
     background: #ffc234;
 }
+
+.pretty-div{
+    background-image:url(http://lorempixel.com/400/200/food); 
+    padding-left:5%;
+
+}

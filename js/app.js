@@ -1,7 +1,8 @@
 function loadPage() {
   
   
-  $("#filtro").keydown(filterOptions);
+  $("#filtro").keydown(filterOptions)
+  $("#filtro2").keydown(filterOptions2);
 }
 
 
@@ -19,6 +20,7 @@ function paintRestaurantsHtml (restaurant) {
   // Agregamos atributos y eventos a los elementos creados en el dom
   $div.attr('data-toggle','modal')
   $div.attr('data-target','.bs-example-modal-sm')
+  $div.addClass('pretty-div')
   // Asignando valores
   
   $containerType.text(restaurant.type);
@@ -43,7 +45,7 @@ function filterOptions (){
     if($("#filtro").val().trim().length > 0) {
         var filteredData = data.filter(function(restaurant) {
            console.log(restaurant);
-            return restaurant.type.toLowerCase().indexOf(searchOption) >= 0;
+            return restaurant.type.toLowerCase().indexOf(searchOption) >= 0; 
 				});
 				$("#section-food").empty();
 				filteredData.forEach(function(restaurant){
@@ -63,6 +65,33 @@ function filterOptions (){
 
   
 }
+
+function filterOptions2 (){
+  var searchOption = $("#filtro2").val().toLowerCase();
+    if($("#filtro2").val().trim().length > 0) {
+        var filteredData = data.filter(function(restaurant) {
+           console.log(restaurant);
+            return restaurant.name.toLowerCase().indexOf(searchOption) >= 0; 
+				});
+				$("#section-food").empty();
+				filteredData.forEach(function(restaurant){
+					paintRestaurantsHtml(restaurant);
+				});
+			} else {
+				$("#section-food").empty();
+				data.forEach(function(restaurant){
+					paintRestaurantsHtml(restaurant);
+				});      
+			}
+      
+    
+
+  
+  console.log( filterOptions2 );
+
+  
+}
+
 
 
 
