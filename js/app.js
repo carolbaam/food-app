@@ -1,3 +1,5 @@
+
+//función para cargar la funcionalidad de los filtros instalados en los inputs
 function loadPage() {
   
   
@@ -17,10 +19,11 @@ function paintRestaurantsHtml (restaurant) {
   //incluir info a modal
 
 
-  // Agregamos atributos y eventos a los elementos creados en el dom
+  //  atributos y eventos a los elementos creados en el DOM
   $div.attr('data-toggle','modal')
   $div.attr('data-target','.bs-example-modal-sm')
   $div.addClass('pretty-div')
+ 
   // Asignando valores
   
   $containerType.text(restaurant.type);
@@ -30,7 +33,7 @@ function paintRestaurantsHtml (restaurant) {
   $div.append($containerRestaurantName);
   $div.append($containerType);
   $div.append($containerPrice);
-  // console.log($newContact);
+ 
   // agregamos lo que creamos con el Dom a un elemento existente del html
 
 
@@ -38,7 +41,7 @@ function paintRestaurantsHtml (restaurant) {
   
 }
 
-
+//Función de filtro1
 
 function filterOptions (){
   var searchOption = $("#filtro").val().toLowerCase();
@@ -66,6 +69,7 @@ function filterOptions (){
   
 }
 
+//función de filtro2
 function filterOptions2 (){
   var searchOption = $("#filtro2").val().toLowerCase();
     if($("#filtro2").val().trim().length > 0) {
